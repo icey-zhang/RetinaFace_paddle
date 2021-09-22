@@ -69,7 +69,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --training_dataset /home/aistudio/widerfa
 #### 生成txt文件
 
 ```
-CUDA_VISIBLE_DEVICES=0 python test_widerface.py --dataset_folder /home/aistudio/widerface/val/images/  --trained_model /home/aistudio/Retinaface-paddle-1/weights/Resnet50_epoch_40.pdparams --save_image
+CUDA_VISIBLE_DEVICES=0 python test_widerface.py --dataset_folder /home/aistudio/widerface/val/images/  --trained_model /home/aistudio/RetinaFace-paddle/weights/Resnet50_epoch_40.pdparams --save_image
 ```
 save_image为可视化检测结果
 请使用V100进行测试
