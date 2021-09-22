@@ -140,7 +140,7 @@ def train():
             eta = int(batch_time * (max_iter - iteration))
             print('Epoch:{}/{} || Epochiter: {}/{} || Iter: {}/{} || Loc: {:.4f} Cla: {:.4f} Landm: {:.4f} || Batchtime: {:.4f} s || ETA: {}'
                 .format(epoch, max_epoch, (iteration % epoch_size) + 1,
-                epoch_size, iteration + 1, max_iter, loss_l.item(), loss_c.item(), loss_landm.item(), batch_time, str(datetime.timedelta(seconds=eta))))
+                epoch_size, epoch_size * epoch + iteration + 1, max_iter, loss_l.item(), loss_c.item(), loss_landm.item(), batch_time, str(datetime.timedelta(seconds=eta))))
 
     paddle.save(net.state_dict(), save_folder + cfg['name'] + '_Final.pdparams')
 
