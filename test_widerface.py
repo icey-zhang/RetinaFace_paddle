@@ -1,11 +1,9 @@
-from __future__ import print_function
 import os
-os.environ['CUDA_VISIBLE_DEVICES']="2"
 import argparse
 import paddle
 # import torch.backends.cudnn as cudnn
 import numpy as np
-from data import cfg_mnet, cfg_re50,WiderFacetest
+from data import cfg_mnet, cfg_re50
 from layers.functions.prior_box import PriorBox
 from utils.nms.py_cpu_nms import py_cpu_nms
 import cv2
