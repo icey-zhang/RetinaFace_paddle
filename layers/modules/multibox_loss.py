@@ -76,14 +76,12 @@ class MultiBoxLoss(nn.Layer):
         num_pos_landm = paddle.sum(paddle.to_tensor(pos1,dtype='float32'),axis=1, keepdim=True)
         N1 = max(paddle.sum(num_pos_landm),1)
         pos_idx1 = paddle.expand_as(pos1.unsqueeze(pos1.dim()),landm_data)
-        if not (paddle.all(pos_idx1) == False):
+        if paddle.sum(paddle.to_tensor(pos_idx1,dtype='int64'))>0:
             landm_p = paddle.masked_select(landm_data,pos_idx1).reshape([-1,10])
+            landm_t = paddle.masked_select(landm_t,pos_idx1).reshape([-1,10])
         else:
             landm_p = paddle.zeros([num, num_priors, 10])
             landm_p = landm_p.reshape([-1,10])
-        if not (paddle.all(pos_idx1) == False):
-            landm_t = paddle.masked_select(landm_t,pos_idx1).reshape([-1,10]) #避免pos_idx1全为假
-        else:
             landm_t = landm_t.reshape([-1,10])
         loss_landm = F.smooth_l1_loss(landm_p, landm_t, reduction='sum')
 
