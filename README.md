@@ -20,7 +20,7 @@ code：[RetinaFace](https://github.com/deepinsight/insightface/blob/master/detec
 |+Lpts |96.467 |96.075 |91.694 |52.297|
 |+Lpixel |96.413 |95.864 |91.276 |51.492|
 |+Lpts + Lpixel |96.942 |96.175 |91.857 |52.318|
-|复现 |94.380 |92.521 |76.704 |57.508|
+|复现 |94.80 |92.95 |81.21 |57.508|
 
 <img src=https://github.com/icey-zhang/RetinaFace_paddle/blob/main/process/333.jpg width=50% />
 
