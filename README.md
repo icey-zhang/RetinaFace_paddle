@@ -20,7 +20,7 @@ code：[RetinaFace](https://github.com/deepinsight/insightface/blob/master/detec
 |+Lpts |96.467 |96.075 |91.694 |52.297|
 |+Lpixel |96.413 |95.864 |91.276 |51.492|
 |+Lpts + Lpixel |96.942 |96.175 |91.857 |52.318|
-|复现 |94.80 |92.95 |81.21 |57.508|
+|复现 |94.14 |93.11 |88.05 | 62.38 |
 
 <img src=https://github.com/icey-zhang/RetinaFace_paddle/blob/main/process/333.jpg width=50% />
 
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --training_dataset /home/aistudio/widerfa
 
 #### 下载权重
 
-40epoch即可，70epoch更佳
+Resnet50_epoch_95.pdparams
 
 [weights](https://pan.baidu.com/s/1nq9CufWCeX4hCxR2JgY3mg) 提取码：y86z。
 
